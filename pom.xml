@@ -23,7 +23,11 @@
                         <image>adoptopenjdk:11-jre-hotspot</image> <!-- Base image -->
                     </from>
                     <to>
-                        <image>your-docker-repo/sample-java-jib-app</image> <!-- Replace with your Docker Hub repo -->
+                        <image>naziml/sample-java-jib-app</image> <!-- Replace with your Docker Hub repo -->
+                        <auth>
+                            <username>${env.DOCKER_USERNAME}</username>
+                            <password>${env.DOCKER_PASSWORD}</password>
+                        </auth>
                     </to>
                     <container>
                         <mainClass>com.example.App</mainClass> <!-- Main class -->
